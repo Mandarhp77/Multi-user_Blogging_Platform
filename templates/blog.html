@@ -1,0 +1,12 @@
+{% extends 'nav.html' %}
+{% block body %}
+<div class = "container my-3">
+{% for i in blog %}
+    <h3>Category:- {{i.category}}</h3>
+    <h4>Name:- {{i.title}}</h4>
+    {{i.content | safe }}
+{% endfor %}
+</div>
+
+
+{% endblock %}

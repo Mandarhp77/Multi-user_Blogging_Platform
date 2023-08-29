@@ -1,0 +1,19 @@
+{% extends 'nav.html' %}
+{% block body %}
+<div class="container my-3">
+    {% for i in cat %}
+    <div class="card my-4" style="max-width: 800px;">
+        <h5 class="card-header">Category: {{i.category}}</h5>
+        <div class="card-body">
+          <h5 class="card-title">Name: {{i.title}}</h5>
+          <p class="card-text">{{i.content | safe | truncatechars:120}}</p>
+          <form action="/blog" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="blog_name" id="hiddenInput" value="{{i.title}}">
+            <button class="btn btn-danger" type="submit">Read whole blog</button>
+          </form>
+        </div>
+      </div>
+    {% endfor %}
+</div>
+{% endblock %}

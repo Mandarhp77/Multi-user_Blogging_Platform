@@ -1,0 +1,92 @@
+{% extends 'nav.html' %}
+{% block body %}
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <img src="static/back5d.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <center>
+        <div class="p-2 mb-4 bg-dark text-light" style="width: 70%", "height: 40%">
+        <h1>Welcome to Multiuser Blog System</h1>
+        <h3>A Multiuser Blog Platform.</h3>
+      </div>
+    </center>
+    </div>
+    </div>
+    <div class="carousel-item" data-bs-interval="2000">
+      <img src="static/back6d.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h1 class="text-white">Combine and Share</h1>
+        <h3 class="text-white">Combine at a place and Share your thaughts.</h3>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="static/back7d.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <center>
+          <div class="p-2 mb-4 bg-dark text-light" style="width: 70%", "height: 40%">
+          <h1>Unity is Always better than individual</h1>
+          <h3>A Multiuser Blog Platform.</h3>
+        </div>
+      </center>
+    </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+  <br/>
+
+  <div class="container">
+    <h4 class="display-5 text-center">Read : knowledge | Write : Sharing</h4>
+  </div>
+  <br/>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <a href="/reader">
+          <img src="static/backr.jpg" class="card-img-top" alt="Image 1" /></a>
+          <div class="card-body">
+            <h4 class="card-title">Read Blogs</h4>
+            <p class="card-text">Read the blogs with categories, Writer already made for you.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <a href="/user">
+          <img src="static/backw.jpg" class="card-img-top" alt="Image 2" /></a>
+          <div class="card-body">
+            <h4 class="card-title">Write Blogs</h4>
+            <p class="card-text">Write your blogs readers are waiting for you.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container my-5">
+    <center>
+      <h4 class="display-5">We are increasing continuously.</h4>
+    <div class="card text-bg-dark my-5" style="height:250px; width:550px">
+      <img src="static/counter.jpg" class="card-img" alt="...">
+      <div class="card-img-overlay">
+        <h1 class="card-title text-dark">Our Trusted Users</h1>
+        <h2 class="card-text text-dark">{{count}}</h2>
+      </div>
+    </div>
+    </center>
+  </div>
+{% endblock %}
